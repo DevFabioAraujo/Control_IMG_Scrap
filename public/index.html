@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Fotos</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Upload de Fotos</h2>
+        <form id="uploadForm" action="http://localhost:3000/save-data" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="serial">Serial:</label>
+                <input type="text" id="serial" name="serial" maxlength="10" required>
+            </div>
+            <div id="photoContainer" class="form-group">
+                <label>Selecione as Fotos:</label>
+                <input type="file" name="photo" required>
+            </div>
+            <button type="button" onclick="addPhotoField()" class="btn-submit">Adicionar Foto</button>
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
+
